@@ -21,7 +21,7 @@
 	-webkit-filter: custom(url(shaders/demo5.vert) mix(url(shaders/demo5.frag) normal source-atop),
 		40 40,
 		time 2,
-		transform perspective(600) rotateX(35deg) scale(0.8));
+		transform perspective(600));
 }
 
 .demo-5 .target div.buffer {

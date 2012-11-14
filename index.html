@@ -73,15 +73,7 @@
 				  <p><span class="warning">73% of the web use HTML5 enabled browsers</span> <br>Chrome + Firefox + IE9/10 + Safari + Opera + Android + iOS</p>
 				  <p style="font-size: 0.6em;"><a href="http://gs.statcounter.com/#browser_version-ww-monthly-201210-201210-bar">gs.statcounter.com/#browser_version-ww-monthly-201210-201210-bar</a></p>
 				</section>
-				
-				<!--<section>
-				  <h1><span class="warning">300 million</span> active Chrome users</h1>
-				</section>-->
-				
-				<section>
-				  <h1>Astounding pace of innovation</h1>
-				</section>
-					
+							
 				<section>
 					<h1>Chromium</h1>
 					<h1 class="warning">50372</h1>
@@ -104,10 +96,6 @@
 				</section>
 				
 				<section>
-					<h1>Awesome in Action</h1>
-				</section>
-				
-				<section>
 				  <h1>Android <span class="warning">+</span> iOS</h1>
 				  <ul>
 					<li>Tab Sync
@@ -116,14 +104,15 @@
 				  </ul>
 				</section>
 				
-				
 				<section data-state="play-video">
 				  <h1><span class="warning">Launched</span> Web Lab</h1>
+				  <a href="http://chromeweblab.com">chromeweblab.com</a>
 				  <img src="images/chromeweblab.png" />
 				</section>
 				
 				<section data-state="play-video">
-				  <h1><span class="warning">Launched</span> JAM with Chrome</h1>
+				  <h1>JAM with Chrome</h1>
+				  <a href="http://jamewithchrome.com">jamwithchrome.com</a>
 				  <img src="images/chromejam.png" />
 				</section>
 
@@ -145,10 +134,7 @@
 				<script>
 				onload = function() {
 					
-			  	  Reveal.addEventListener( 'play-video', function() {
-			        
-			      });  
-		
+			  
 				  var videos = document.querySelectorAll("video");
 				  window.navigator.webkitGetUserMedia({audio: true, video: true}, function(stream) {
 					var url = URL.createObjectURL(stream);
@@ -156,38 +142,8 @@
 					  videos[v].src = url;	
 					}
 					
-					var video = videos[0];
-					
-					var anim = document.querySelector('#anim');
-					var context = anim.getContext("2d");
-					var counter = 0;
-					var animId;
-
-					Reveal.addEventListener( 'kill-anim', function() {
-					  if(animId) {
-					    clearInterval(animId);
-					    animId = undefined;	
-					  }
-					});
-					
 				
-
-					Reveal.addEventListener( 'start-anim', function() {
-					  	animId = setInterval(function() {
-						  context.drawImage(video, 0, 0, 160, 120);
-						  counter ++;
-						  if(counter % 2) {
-							output1.style.backgroundImage = "url(" +  anim.toDataURL() + ")";
-							output1.style.opacity = 0;
-						  }
-						  else {
-							output2.style.backgroundImage = "url(" +  anim.toDataURL() + ")";
-							output1.style.opacity = 1;
-					      }
-
-					    }, 125);
-					  });
-					} );
+				});
 				
 				  /*
 				  var speechEl = document.getElementById("speech");
@@ -288,8 +244,7 @@
 					</div>
 				</section>
 				<section>
-		           <h1>Now for something more awesome.</h1>
-		           <h1 class="warning">A New Platform</h1>
+		           <h1 class="warning">A New Platform for apps</h1>
 		        </section>
 				<section>
 		            <h2>Apps should</h2>
@@ -313,7 +268,7 @@
 				<section>
 	
 		            <h3>Markdown Demo</h3>
-		            <p>Using <span class="warning">Browserify</span></p>
+		            <p>Node Modules via <span class="warning">Browserify</span></p>
 		            <pre><code>onload = function() {
   var mdEl = document.getElementById("markdown");
   var htmlEl = document.getElementById("html");
@@ -325,7 +280,7 @@
     htmlEl.innerHTML = output;
   };
 };</code></pre>
-
+<pre><code>$ npm install markdown</code></pre>
 <pre><code>$ browserify -r markdown -o bundle.js</code></pre>
 				</section>
 				<section>
